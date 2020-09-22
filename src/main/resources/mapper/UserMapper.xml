@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leo.mybatis.mapper.UserMapper">
+
+    <!--查询所有用户-->
+    <select id="findList" resultType="com.leo.mybatis.bean.User">
+        select * from user
+    </select>
+
+    <!--新增标签
+        parameterType：参数类型   可以省略不写  Mybatis自动推断
+        新增 更新 删除不需要写返回值  默认int
+    -->
+    <insert id="addUser" parameterType="com.leo.mybatis.bean.User">
+        insert into user values (null,#{name},#{age},#{email})
+    </insert>
+
+
+</mapper>
