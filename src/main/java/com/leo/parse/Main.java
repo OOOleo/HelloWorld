@@ -236,7 +236,6 @@ public class Main {
             case "LIKE":
             case "IS NULL":
             case "IS NOT NULL":
-
                 return true;
             default:
                 return false;

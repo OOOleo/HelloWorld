@@ -1,21 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.leo.mybatis.mapper.UserMapper">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
+<mapper namespace="com.leo.mybatis.mapper.UserMapper">
     <!--查询所有用户-->
-    <select id="findList" resultType="com.leo.mybatis.bean.User">
+    <select id="findList" resultType="User">
         select * from user
     </select>
+    <select id="getColumnInfo" resultType="Column">
+        select column_name as name,column_type as type from information_schema.COLUMNS where table_name = #{tableName}and table_schema = #{dbName};
+    </select>
+
+    <!--根据id查询  查询返回值要写-->
+    <select id="getById" resultType="User">
+        select * from user where id=#{id}
+    </select>
+
 
     <!--新增标签
         parameterType：参数类型   可以省略不写  Mybatis自动推断
         新增 更新 删除不需要写返回值  默认int
+        新增成功返回主键id  useGeneratedKeys    keyProperty
     -->
-    <insert id="addUser" parameterType="com.leo.mybatis.bean.User">
+     <insert id="addUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
         insert into user values (null,#{name},#{age},#{email})
     </insert>
+
+    <!--后者不配置  写sql语句-->
+
+    <insert id="addUser1" parameterType="User" >
+        <selectKey keyProperty="id" order="AFTER" resultType="int">
+            <!--获取最后一次新增成功的id值-->
+            select LAST_INSERT_ID()
+        </selectKey>
+
+        insert into user values (null,#{name},#{age},#{email})
+    </insert>
+
+
+    <!--根据id更新-->
+    <update id="updateUserById">
+        update user set name =#{name},age=#{age},email=#{email} where id = #{id}
+    </update>
+
+    <!--根据id删除-->
+    <delete id="deleteUser">
+        delete from user where id=#{id}
+    </delete>
+
+    <!--测试模糊查询1-->
+    <select id="findUserByName" resultType="User">
+        select * from user where name like #{username}
+    </select>
+
+    <!--测试模糊查询2-->
+    <select id="findUserByName1" resultType="User" parameterType="String">
+        select * from user where name like '%${value}%'
+    </select>
+
+
+    <!--Map传入多参数-->
+    <select id="findUsersByBirthday" resultType="User">
+        select * from user where age between #{low_age} and #{high_age}
+    </select>
+
+    <select id="getTotalCount" resultType="java.lang.Integer">
+        select count(*) from user
+    </select>
+
+    <!--查age的最大值和最小值-->
+    <select id="getUsers1" resultType="java.util.Map">
+        select max(age) as max_age, min(age) as min_age from user
+    </select>
+
+    <!--另一种写法-->
+
+    <select id="getUsers" resultMap="my_map">
+        select max(age) , min(age) from user
+    </select>
+
+
+
+    <resultMap id="my_map" type="map">
+        <result property="max_age" column="max(age)"/>
+        <result property="min_age" column="min(age)"/>
+    </resultMap>
+
+
+    <!--动态sql-->
+    <select id="selectUserByNameAndAge" resultType="User" parameterType="User">
+        select * from user where 1=1
+        <if test="name!=null and name!=''">
+            and name like #{name}
+        </if>
+         <if test="age!=null and age!=''">
+            and age < #{age}
+         </if>
+    </select>
+
 
 
 </mapper>

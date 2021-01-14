@@ -1,0 +1,12 @@
+
+]
+java:S2259-"BA "NullPointerException" could be thrown; "stmt" is nullable here.(Æ€»Çùÿÿÿÿ
+<
+java:S1068"'Remove this unused "log" private field.(—Üà
+S	java:S106"9Replace this use of System.out or System.err by a logger.(—ÿ¿ÿÿÿÿÿ
+S	java:S106""9Replace this use of System.out or System.err by a logger.(Ô¸öüøÿÿÿÿ
+Z
+java:S2147%"DCombine this catch with the one at line 35, which has the same body.(¯žáè
+8
+java:S2695""ResultSet indices start at 1.(Ô¸öüøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(öœŽì

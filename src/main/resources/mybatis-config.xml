@@ -4,6 +4,12 @@
 <configuration>
     <!--引入外部properties文件  -->
     <properties resource="db.properties"></properties>
+
+    <!--实体类取别名-->
+    <typeAliases>
+        <!--定义扫描包-->
+        <package name="com.leo.mybatis.bean"/>
+    </typeAliases>
     <!--和Spring整合后 environments 配置将废除 -->
     <environments default="development">
         <!--开发环境-->

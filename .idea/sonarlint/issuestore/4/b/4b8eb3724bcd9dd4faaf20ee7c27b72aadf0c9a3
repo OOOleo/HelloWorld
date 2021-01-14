@@ -1,0 +1,39 @@
+
+S
+java:S1854,"=Remove this useless assignment to local variable "orderList".(‰Šî
+S	java:S106="9Replace this use of System.out or System.err by a logger.(×µ²ÿıÿÿÿÿ
+P
+java:S1854+":Remove this useless assignment to local variable "having".(î×Ê±
+C
+java:S1481I"-Remove this unused "tempKind" local variable.(éÚøŞ
+U
+java:S1854*"?Remove this useless assignment to local variable "sqlNodeList".(¼±€®
+o
+java:S1450"YRemove the "fromSource" field and declare it as a local variable in the relevant methods.(Éé¤¿
+C
+java:S1481K"-Remove this unused "sqlNode1" local variable.(¥¨‘Ä
+E
+java:S1481H"*Remove this unused "count" local variable.(“¶ï´úÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(Ô¼ß
+[
+java:S2259%"EA "NullPointerException" could be thrown; "sqlNode" is nullable here.(ÜŸËã
+œ
+java:S1186Z"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æ›“øÿÿÿÿ
+D
+java:S1481,".Remove this unused "orderList" local variable.(‰Šî
+T
+java:S1854H"9Remove this useless assignment to local variable "count".(“¶ï´úÿÿÿÿ
+S	java:S106J"9Replace this use of System.out or System.err by a logger.(ìöû¶ùÿÿÿÿ
+_
+java:S1128"DRemove this unused import 'org.apache.calcite.sql.type.SqlTypeName'.(¯ıÙ¨ûÿÿÿÿ
+R
+java:S1854I"<Remove this useless assignment to local variable "tempKind".(éÚøŞ
+>	java:S108K")Either remove or fill this block of code.(¥¨‘Ä
+F
+java:S1481*"0Remove this unused "sqlNodeList" local variable.(¼±€®
+A
+java:S1481+"+Remove this unused "having" local variable.(î×Ê±
+B
+java:S1068"-Remove this unused "sqlSelect" private field.(¶¥¶T
+D
+java:S1068".Remove this unused "fromSource" private field.(Éé¤¿

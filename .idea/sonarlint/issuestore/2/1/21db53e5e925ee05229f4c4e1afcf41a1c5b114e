@@ -1,0 +1,8 @@
+
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ξ‡ε²ÿÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Κϊ¤£
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(„ΰιώÿÿÿÿ
+N	java:S106/"9Replace this use of System.out or System.err by a logger.(χΉ§µ
+h
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Ηµν‘
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(³Ο½ψÿÿÿÿ
