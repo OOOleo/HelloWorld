@@ -18,7 +18,8 @@ public class Main {
         String Hyphens = "--";
         String boundary = "*****";
         String fileName = uploadFilePath.substring(uploadFilePath.lastIndexOf(File.separator) + 1);
-        String actionUrl = "http://localhost:8080/file";
+//        String actionUrl = "http://localhost:8080/file";
+        String actionUrl = "http://101.200.61.68:10086/file";
         StringBuilder sb = new StringBuilder(actionUrl);
         sb.append("?filename=" + fileName);
         String newURL = sb.toString();

@@ -1,17 +1,17 @@
 
-Z	java:S106%"9Replace this use of System.out or System.err by a logger.(Â°ü”ÿÿÿÿÿ8üé‹Íæ.
-c
-java:S1192"FDefine a constant instead of duplicating this literal "PROP(" 4 times.(öùºÎ8üé‹Íæ.
-W
-java:S1854"5Remove this useless assignment to local variable "s".(·Á«ûÿÿÿÿ8üé‹Íæ.
-J
-java:S1481"-Remove this unused "typeList" local variable.(ÉôÀÈ8üé‹Íæ.
-H
-java:S1481"&Remove this unused "s" local variable.(·Á«ûÿÿÿÿ8üé‹Íæ.
-Z	java:S106$"9Replace this use of System.out or System.err by a logger.(¨§ÌÏşÿÿÿÿ8üé‹Íæ.
 M
 java:S1172
 "+Remove this unused method parameter "args".(À»Áùÿÿÿÿ8üé‹Íæ.
+J
+java:S1481"-Remove this unused "typeList" local variable.(ÉôÀÈ8üé‹Íæ.
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(¨§ÌÏşÿÿÿÿ8üé‹Íæ.
+W
+java:S1854"5Remove this useless assignment to local variable "s".(·Á«ûÿÿÿÿ8üé‹Íæ.
 Y
 java:S1854"<Remove this useless assignment to local variable "typeList".(ÉôÀÈ8üé‹Íæ.
+H
+java:S1481"&Remove this unused "s" local variable.(·Á«ûÿÿÿÿ8üé‹Íæ.
+Z	java:S106%"9Replace this use of System.out or System.err by a logger.(Â°ü”ÿÿÿÿÿ8üé‹Íæ.
 U	java:S106"9Replace this use of System.out or System.err by a logger.(ô»¤Ü8üé‹Íæ.
+c
+java:S1192"FDefine a constant instead of duplicating this literal "PROP(" 4 times.(öùºÎ8üé‹Íæ.

@@ -1,18 +1,19 @@
 package com.leo.test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Test12 {
 
     public static void main(String[] args) {
-        List<Integer> list1 = new ArrayList<>();
-        List<Integer> list2 = new ArrayList<>();
-        list1.add(1);
-        list1.add(2);
-        list2.add(2);
-        list2.add(1);
-        System.out.println(list1.equals(list2));
+        Map<String, String> map = new HashMap<>();
+        map.put("a", "1");
+        map.put("b", "2");
+        map.put("c", "3");
+        map.clear();
+        System.out.println(map.size());
+        System.out.println(map);
+
     }
 
 }

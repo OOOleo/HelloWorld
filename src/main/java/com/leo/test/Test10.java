@@ -9,10 +9,11 @@ public class Test10 {
     public static void main(String[] args) {
         Scope scope = Scope.create();
         configScope(scope);
-
+        Variable a = scope.getVariable("啊 ");
         try {
             getParserConfig();
-            Expression expr = Parser.parse("SIN(PI/2)", scope);
+            Expression expr = Parser.parse("SIN(PI/2)+啊 ", scope);
+            a.setValue(100);
             System.out.println(expr.evaluate());
 
         } catch (ParseException e) {
