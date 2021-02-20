@@ -10,20 +10,17 @@ public class CountDownLatchDemo {
         final CountDownLatch cdOrder = new CountDownLatch(1);
         final CountDownLatch cdAnswer = new CountDownLatch(3);
         for (int i = 0; i < 3; i++) {
-            Runnable runnable=new Runnable() {
-                @Override
-                public void run() {
+            Runnable runnable= () -> {
 
-                    try {
-                        System.out.println("线程"+Thread.currentThread().getName()+"正准备接收命令");
-                        cdOrder.await();
-                        System.out.println("线程"+Thread.currentThread().getName()+"已接收命令");
-                        Thread.sleep((long) (Math.random()*10000));
-                        System.out.println("线程"+Thread.currentThread().getName()+"回应命令处理结果");
-                        cdAnswer.countDown();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                try {
+                    System.out.println("线程"+Thread.currentThread().getName()+"正准备接收命令");
+                    cdOrder.await();
+                    System.out.println("线程"+Thread.currentThread().getName()+"已接收命令");
+                    Thread.sleep((long) (Math.random()*10000));
+                    System.out.println("线程"+Thread.currentThread().getName()+"回应命令处理结果");
+                    cdAnswer.countDown();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             };
             service.execute(runnable);

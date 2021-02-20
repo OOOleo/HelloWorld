@@ -1,7 +1,6 @@
 package com.leo.thread.concurrency1;
 
 
-import sun.util.locale.provider.LocaleProviderAdapter;
 
 /*
     1.当调用wait时，首先确保调用wait的方法的线程已经持有该对象的锁
